@@ -266,8 +266,8 @@ init_packit_repo() {
     # Force overwrite custom files
     if [[ -d "${GITHUB_WORKSPACE}/files" ]]; then
         echo -e "${STEPS} Copying custom files..."
-        sudo cp -rf "${GITHUB_WORKSPACE}/files" "${SELECT_PACKITPATH}/"
-        echo -e "${INFO} List of custom files in [ ${SELECT_PACKITPATH}/files ]:\n$(ls -l ${SELECT_PACKITPATH}/files)"
+        sudo cp -rf "${GITHUB_WORKSPACE}/files" "${SELECT_PACKITPATH}/files"
+        echo -e "${INFO} File copy completed."
     fi
 
     # Check the *rootfs.tar.gz package
